@@ -22,7 +22,6 @@ socket.on('message', (message) => {
   //document.querySelector('#messages').insertAdjacentHTML('beforeend', html)
 })
 
-
 $messageForm.addEventListener('submit', (e) => {
   e.preventDefault()
 
@@ -35,7 +34,7 @@ $messageForm.addEventListener('submit', (e) => {
 
 
   socket.emit('sendMessage', message, (error) => {
-      $messageFormButton.removeAttribute('disabled')
+      //$messageFormButton.removeAttribute('disabled')
       $messageFormInput.value = ''
       $messageFormInput.focus()
 
